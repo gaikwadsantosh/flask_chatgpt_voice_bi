@@ -1,0 +1,8 @@
+flask
+pyodbc
+pandas
+numpy
+azure.cognitiveservices.speech
+pydub
+openai
+jsonify

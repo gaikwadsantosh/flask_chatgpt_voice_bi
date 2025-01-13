@@ -1,0 +1,24 @@
+# Ignore Python environment folders
+venv/
+env/
+env_flaskapp
+
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+# Ignore log files
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE and editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Ignore other temporary files
+*.tmp
+*.bak

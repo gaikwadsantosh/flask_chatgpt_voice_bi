@@ -1,0 +1,209 @@
+/* General Body Styling */
+body {
+    background-color: #f5f7fa; /* Soft light background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; /* Dark text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Background Strip */
+.header-strip {
+    background: linear-gradient(90deg, #0056b3, #007bff); /* Gradient background */
+    color: #ffffff; /* White text */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header-strip h1 {
+    margin: 0;
+    font-size: 1.8rem; /* Adjust font size */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 1px;
+}
+
+/* Main Container */
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Button Styling */
+.btn {
+    align-self: center;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #b21f2d;
+}
+
+/* Audio Playback Styling */
+audio {
+    flex: 1;
+    height: 60px; /* Matches button height */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    audio {
+        width: 100%;
+        height: 50px;
+    }
+}
+
+/* Recognized Text Styling */
+.recognized-text {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f1f1; /* Light gray background for contrast */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    color: #333; /* Dark text for readability */
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Match overall theme */
+    text-align: left; /* Center-align text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Highlight recognized text */
+.recognized-text span {
+    font-weight: bold; /* Highlighted text */
+    color: #0056b3; /* Match button hover color for consistency */
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Match overall font */
+    color: #333; /* Text color */
+}
+
+.result-box pre {
+    white-space: pre-wrap; /* Wrap long SQL queries */
+    word-wrap: break-word; /* Break long words */
+    margin: 0;
+    padding: 10px;
+    background: #eef; /* Light blue background for SQL queries */
+    border-radius: 4px; /* Rounded corners */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.hidden {
+    display: none; /* Hides the element */
+}
+
+.visible {
+    display: block; /* Shows the element */
+}
+
+#loadingIndicator {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3; /* Light grey */
+    border-top: 3px solid #007bff; /* Blue */
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px; /* Add spacing between the spinner and audioPlayback */
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
